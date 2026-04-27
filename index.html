@@ -470,6 +470,126 @@
       opacity: 0.8;
     }
 
+    /* ── BRINDES ── */
+    .brindes {
+      background: var(--black);
+      border-bottom: var(--border-heavy);
+    }
+
+    .brindes-header {
+      background: var(--volt);
+      padding: 64px 48px 48px;
+      border-bottom: var(--border-heavy);
+    }
+
+    .brindes-sticker {
+      display: inline-block;
+      background: var(--black);
+      color: var(--volt);
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 8px 16px;
+      border: 3px solid var(--black);
+      box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+      transform: rotate(-1.5deg);
+      margin-bottom: 24px;
+    }
+
+    .brindes-title {
+      font-family: 'Ranchers', cursive;
+      font-size: clamp(64px, 10vw, 130px);
+      text-transform: uppercase;
+      line-height: 0.88;
+      color: var(--black);
+      text-shadow: 6px 6px 0px rgba(0,0,0,0.15);
+      margin-bottom: 16px;
+    }
+
+    .brindes-sub {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      color: #2d4000;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    .brindes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0;
+    }
+
+    .brinde-card {
+      padding: 40px 36px;
+      border-right: var(--border-heavy);
+      border-bottom: var(--border-heavy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brinde-card:last-child { border-right: none; }
+
+    .brinde-destaque {
+      background: var(--volt);
+    }
+
+    .brinde-num {
+      font-family: 'Ranchers', cursive;
+      font-size: 120px;
+      color: var(--white);
+      opacity: 0.04;
+      position: absolute;
+      right: -10px;
+      bottom: -20px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .brinde-destaque .brinde-num { color: var(--black); opacity: 0.06; }
+
+    .brinde-tag {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 4px 10px;
+      border: 2px solid var(--volt);
+      color: var(--volt);
+      margin-bottom: 16px;
+    }
+
+    .brinde-destaque .brinde-tag {
+      border-color: var(--black);
+      color: var(--black);
+      background: var(--black);
+      color: var(--volt);
+    }
+
+    .brinde-card h3 {
+      font-family: 'Ranchers', cursive;
+      font-size: 32px;
+      text-transform: uppercase;
+      line-height: 1;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .brinde-destaque h3 { color: var(--black); }
+
+    .brinde-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #94a3b8;
+    }
+
+    .brinde-destaque p { color: #2d4000; font-weight: 600; }
+
     /* ── OBJECTIONS ── */
     .objections {
       background: var(--white);
@@ -729,7 +849,7 @@ Posso ver se arrumo uma vaga extra pra você!"</pre>
 
 [Espera a resposta dela antes de continuar]
 
-Faz sentido né? O agente já faria 80% do atendimento por você,
+Faz sentido né? O agente faz 100% do atendimento por você,
 respondendo 24h no estilo que você usa.
 
 O que a gente entrega: agente configurado pro seu produto,
@@ -737,6 +857,19 @@ rodando de verdade no seu WhatsApp, com suporte mensal.
 
 São R$2.000 de setup + R$200/mês de manutenção
 + o custo dos tokens (repassado mensalmente, você ve o extrato).
+
+E se você fechar agora, eu incluo de brinde:
+
+⚡ Mensagem automática de boas-vindas pra quem comprar seu curso
+   (com orientações de acesso — sem você precisar mandar nada)
+
+⚡ Suporte financeiro: agente responde pedidos de reembolso automaticamente
+
+⚡ 50% de desconto num agente de suporte técnico pra responder
+   dúvidas dos seus alunos pelo WhatsApp ou e-mail
+
+Esses brindes são só pra quem fecha agora — se deixar pra depois,
+não vão estar disponíveis.
 
 1 venda do seu produto já paga a mensalidade inteira.
 Tudo que vier depois é lucro líquido.
@@ -796,6 +929,39 @@ Quer prosseguir?"</pre>
       <div class="price-amount">CUSTO REAL</div>
       <p class="price-desc">Custo de uso da IA repassado mensalmente com extrato. Cliente paga o consumo real, sem markup.</p>
     </div>
+  </div>
+</section>
+
+<!-- BRINDES -->
+<section class="brindes">
+  <div class="brindes-header">
+    <div class="brindes-sticker">⚡ SÓ VÁLIDO SE FECHAR AGORA</div>
+    <h2 class="brindes-title">BRINDES<br/>EXCLUSIVOS</h2>
+    <p class="brindes-sub">Se deixar pra depois, esses benefícios não estarão mais disponíveis.</p>
+  </div>
+  <div class="brindes-grid">
+
+    <div class="brinde-card">
+      <div class="brinde-num">01</div>
+      <div class="brinde-tag">INCLUÍDO</div>
+      <h3>BOAS-VINDAS AUTOMÁTICAS</h3>
+      <p>Quando alguém comprar seu curso, o agente envia automaticamente uma mensagem de boas-vindas com todas as orientações de acesso. Você não precisa mandar nada.</p>
+    </div>
+
+    <div class="brinde-card">
+      <div class="brinde-num">02</div>
+      <div class="brinde-tag">INCLUÍDO</div>
+      <h3>SUPORTE FINANCEIRO</h3>
+      <p>O agente responde pedidos de reembolso automaticamente, filtra os casos e escala só o que precisa da sua atenção. Menos dor de cabeça, mais tempo livre.</p>
+    </div>
+
+    <div class="brinde-card brinde-destaque">
+      <div class="brinde-num">03</div>
+      <div class="brinde-tag">50% DE DESCONTO</div>
+      <h3>AGENTE DE SUPORTE TÉCNICO</h3>
+      <p>Um agente dedicado pra responder dúvidas dos seus alunos pelo WhatsApp ou e-mail. Metade do preço — só pra quem fechar agora.</p>
+    </div>
+
   </div>
 </section>
 
